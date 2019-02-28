@@ -26,7 +26,7 @@ Please use the same login as was used to install the ZelNode.
 **PLEASE BE SURE YOU ARE LOGGED IN AS YOUR USERNAME (not root) BEFORE RUNNING THIS SCRIPT**
 
 ```
-wget -O zelnodeupdate.sh https://raw.githubusercontent.com/ZelScripts/ZelNodeUpgrade/master/zelnodeupdate.sh && chmod +x zelnodeupdate.sh && bash ./zelnodeupdate.sh
+wget -O zelnodeupdate.sh https://raw.githubusercontent.com/zelcash/ZelNodeUpdate/master/zelnodeupdate.sh && chmod +x zelnodeupdate.sh && bash ./zelnodeupdate.sh
 ```
 
 The script will update your OS, install the new ZelNode binaries, and create a cron job to compress & rotate zel log files
@@ -48,4 +48,7 @@ zelcash-cli getinfo
 __NOTE:__ Please wait a few minutes for your node to connect and sync with the network before running this command.
 
 ***
-A special thank you to **Skyslayer**, **AltTank fam**, **dk808**, & **Packetflow** for their contributions to this scrypt, and **Orthoreb** for debugging.
+A special thank you to **Skyslayer**, who did the majority of the work on assembling this script, and **OrthoReb** for debugging.
+
+If encountering problems with this script, please visit the official ZelCash FAQ at https://faq.zelcore.io/
+For answers to common questions regarding ZelNodes, please visit https://github.com/zelcash/zelcash/wiki/ZelNode-FAQ
