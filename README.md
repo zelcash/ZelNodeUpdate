@@ -26,7 +26,7 @@ Please use the same login as was used to install the ZelNode.
 **PLEASE BE SURE YOU ARE LOGGED IN AS YOUR USERNAME (not root) BEFORE RUNNING THIS SCRIPT**
 
 ```
-wget -O zelnodeupdate.sh https://raw.githubusercontent.com/ZelScripts/ZelNodeUpgrade/master/zelnodeupdate.sh && chmod +x zelnodeupdate.sh && bash ./zelnodeupdate.sh
+wget -O zelnodeupdate.sh https://raw.githubusercontent.com/zelcash/ZelNodeUpdate/master/zelnodeupdate.sh && chmod +x zelnodeupdate.sh && bash ./zelnodeupdate.sh
 ```
 
 The script will update your OS, install the new ZelNode binaries, and create a cron job to compress & rotate zel log files
