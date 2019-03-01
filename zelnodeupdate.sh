@@ -28,6 +28,7 @@ FETCHPARAMS='https://raw.githubusercontent.com/zelcash/zelcash/master/zcutil/fet
 #end of required details
 
 #Display script name and version
+clear
 echo -e '\033[1;33m==================================================================\033[0m'
 echo -e 'ZelNode Update, v1.0'
 echo -e '\033[1;33m==================================================================\033[0m'
@@ -61,11 +62,14 @@ echo "Installing package updates..."
 sudo apt-get update -y
 sudo apt-get upgrade -y
 echo -e "\033[1;32mLinux Packages Updates complete...\033[0m"
+sleep 2
 #Setup log rotation
 echo -e "\n\033[1;33mConfiguring log rotate function...\033[0m"
+sleep 1
 if [ -f /etc/logrotate.d/zeldebuglog ]; then
     echo -e "\033[1;36mExisting log rotate conf found, backing up to ~/zeldebuglogrotate.old ...\033[0m"
     sudo mv /etc/logrotate.d/zeldebuglog ~/zeldebuglogrotate.old;
+    sleep 2
 fi
 touch /home/$USERNAME/zeldebuglog
 cat <<EOM > /home/$USERNAME/zeldebuglog
