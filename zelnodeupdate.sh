@@ -6,7 +6,7 @@
 
 #wallet information
 COIN_NAME='zelcash'
-WALLET_DOWNLOAD='https://github.com/zelcash/zelcash/releases/download/v3.0.0/ZelCash-Linux.tar.gz'
+WALLET_DOWNLOAD='https://github.com/zelcash/zelcash/releases/download/v3.1.0/ZelCash-Linux.tar.gz'
 WALLET_BOOTSTRAP='https://zelcore.io/zelcashbootstraptxindex.zip'
 BOOTSTRAP_ZIP_FILE='zelcashbootstraptxindex.zip'
 WALLET_TAR_FILE='ZelCash-Linux.tar.gz'
