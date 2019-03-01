@@ -97,7 +97,7 @@ mkdir ~/zeltemp
 wget -c $WALLET_DOWNLOAD -O - | tar -xz -C ~/zeltemp
 #copy daemon files to bin directory and change perms to X
 sudo cp ~/zeltemp/zelcash* /usr/bin
-sudo chmod u+x /usr/bin/zelcash*
+sudo chmod 755 /usr/bin/zelcash*
 #remove temp files
 rm -rf $WALLET_TAR_FILE && rm -rf ~/zeltemp
 cd
