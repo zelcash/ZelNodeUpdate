@@ -105,7 +105,7 @@ sudo chmod 755 /usr/bin/zelcash*
 #remove temp files
 rm -rf $WALLET_TAR_FILE && rm -rf ~/zeltemp
 cd
-sudo chown -R $username:$username /home/$username/
+sudo chown -R  $USERNAME:$USERNAME /home/$USERNAME/
 #Notice to user we are complete and request a reboot
 echo -e "\033[1;32mUpdate complete.\nPlease reboot the VPS by typing: \033[0msudo reboot -n\033[1;32m."
 echo -e "Then verify the ZelCash daemon has started by typing: \033[0mzelcash-cli getinfo\033[1;32m.\033[0m"
