@@ -2,7 +2,7 @@
 
 ###### you must be logged in as a sudo user, not root #######
 # This script will update your ZelNode daemon to the current release
-
+# Version ZelNodeUpdate v1.1
 
 #wallet information
 COIN_NAME='zelcash'
