@@ -25,7 +25,7 @@ FETCHPARAMS='https://raw.githubusercontent.com/zelcash/zelcash/master/zcutil/fet
 #Display script name and version
 clear
 echo -e '\033[1;33m==================================================================\033[0m'
-echo -e 'ZelNode Update, v1.0'
+echo -e 'ZelNode Update, v1.1'
 echo -e '\033[1;33m==================================================================\033[0m'
 echo -e '\033[1;34m19 Feb. 2019, by alltank fam, dk808zelnode, Goose-Tech & Skyslayer\033[0m'
 echo -e
