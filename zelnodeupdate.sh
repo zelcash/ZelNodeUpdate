@@ -59,6 +59,10 @@ echo -e "\033[1;33m=======================================================\033[0
 echo "Updating your OS..."
 echo -e "\033[1;33m=======================================================\033[0m"
 echo "Installing package updates..."
+#adding ZelCash APT Repo
+echo 'deb https://zelcash.github.io/aptrepo/ all main' | sudo tee --append /etc/apt/sources.list.d/zelcash.list > /dev/null
+gpg --keyserver keyserver.ubuntu.com --recv 4B69CA27A986265D > /dev/null
+gpg --export 4B69CA27A986265D | sudo apt-key add - > /dev/null
 sudo apt-get update -y
 sudo apt-get upgrade -y
 echo -e "\033[1;32mLinux Packages Updates complete...\033[0m"
@@ -93,19 +97,17 @@ sudo systemctl stop zelcash > /dev/null 2>&1 && sleep 3
 sudo zelcash-cli stop > /dev/null 2>&1 && sleep 5
 sudo killall $COIN_DAEMON > /dev/null 2>&1
 #Removing old zelcash files
-sudo rm -rf /usr/bin/zelcash* > /dev/null 2>&1
+#delete any existing zelcash form /usr/local/bin and /usr/bin
+sudo rm /usr/local/bin/zelcash* > /dev/null 2>&1 && sleep 2
+sudo rm /usr/bin/zelcash* > /dev/null 2>&1 && sleep 2
 echo -e "\033[1;33mDownloading new wallet binaries...\033[0m"
+
+#Install zelcash files using APT
+sudo apt-get install zelcash -y
+sudo chmod 755 /usr/local/bin/zelcash*
 #begin downloading wallet binaries
-cd
-mkdir ~/zeltemp
-wget -c $WALLET_DOWNLOAD -O - | tar -xz -C ~/zeltemp
-#copy daemon files to bin directory and change perms to X
-sudo cp ~/zeltemp/zelcash* /usr/bin
-sudo chmod 755 /usr/bin/zelcash*
-#remove temp files
-rm -rf $WALLET_TAR_FILE && rm -rf ~/zeltemp
-cd
 sudo chown -R $USERNAME:$USERNAME /home/$USERNAME
+cd
 #Notice to user we are complete and request a reboot
 echo -e "\033[1;32mUpdate complete.\nPlease reboot the VPS by typing: \033[0msudo reboot -n\033[1;32m."
 echo -e "Then verify the ZelCash daemon has started by typing: \033[0mzelcash-cli getinfo\033[1;32m.\033[0m"
