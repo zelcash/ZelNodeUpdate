@@ -6,17 +6,12 @@
 
 #wallet information
 COIN_NAME='zelcash'
-WALLET_DOWNLOAD='https://github.com/zelcash/zelcash/releases/download/v3.1.0/ZelCash-Linux.tar.gz'
-WALLET_BOOTSTRAP='https://zelcore.io/zelcashbootstraptxindex.zip'
-BOOTSTRAP_ZIP_FILE='zelcashbootstraptxindex.zip'
-WALLET_TAR_FILE='ZelCash-Linux.tar.gz'
 ZIPTAR='unzip'
 CONFIG_FILE='zelcash.conf'
-RPCPORT=16124
 PORT=16125
 COIN_DAEMON='zelcashd'
 COIN_CLI='zelcash-cli'
-COIN_PATH='/usr/bin'
+COIN_PATH='/usr/local/bin'
 USERNAME=$(who -m | awk '{print $1;}')
 YELLOW='\033[1;33m'
 BLUE='\033[1;34m'
@@ -62,7 +57,7 @@ echo "Installing package updates..."
 #adding ZelCash APT Repo
 echo 'deb https://zelcash.github.io/aptrepo/ all main' | sudo tee --append /etc/apt/sources.list.d/zelcash.list > /dev/null
 gpg --keyserver keyserver.ubuntu.com --recv 4B69CA27A986265D > /dev/null
-gpg --export 4B69CA27A986265D | sudo apt-key add - > /dev/null
+gpg --export 4B69CA27A986265D | sudo apt-key add -
 sudo apt-get update -y
 sudo apt-get upgrade -y
 echo -e "\033[1;32mLinux Packages Updates complete...\033[0m"
@@ -100,12 +95,11 @@ sudo killall $COIN_DAEMON > /dev/null 2>&1
 #delete any existing zelcash form /usr/local/bin and /usr/bin
 sudo rm /usr/local/bin/zelcash* > /dev/null 2>&1 && sleep 2
 sudo rm /usr/bin/zelcash* > /dev/null 2>&1 && sleep 2
-echo -e "\033[1;33mDownloading new wallet binaries...\033[0m"
+echo -e "\033[1;33mUpdating new wallet binaries...\033[0m"
 
 #Install zelcash files using APT
 sudo apt-get install zelcash -y
 sudo chmod 755 /usr/local/bin/zelcash*
-#begin downloading wallet binaries
 sudo chown -R $USERNAME:$USERNAME /home/$USERNAME
 cd
 #Notice to user we are complete and request a reboot
