@@ -5,7 +5,7 @@ A simple script to assist with updating ZelNodes to the latest version.
 
 **NOTE:** This installation guide is provided as is with no warranties of any kind.
 
-**NOTE:** To run this version of the script (v1.1), please use the same login that was used to install the ZelNode.
+**NOTE:** To run this version of the script (v2.0), please use the same login that was used to install the ZelNode.
 
 This script has been tested on Ubuntu Server 16.04 & 18.04.
 
