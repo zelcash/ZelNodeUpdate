@@ -33,6 +33,9 @@ The script will update your OS, install the new ZelNode binaries, and create a c
 
 __NOTE:__ This process may take anywhere from 3 to 5 minutes, depending on your VPS HW specs.
 
+Some users that have not updated in a long time might see the following. Select the "Keep the local version currently installed" option
+![screenshot](https://cdn.discordapp.com/attachments/540711779395829799/568491674167279634/unknown.png)
+
 3) **Once the script completes, reboot your VPS** by typing the following command:
 
 ```
