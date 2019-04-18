@@ -1,4 +1,4 @@
-# ZelNodeUpdate v1.1
+# ZelNodeUpdate Version V2
 A simple script to assist with updating ZelNodes to the latest version.
 
 ## NOTE: This script is the latest version for MainNet ZelNodes.
