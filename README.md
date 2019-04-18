@@ -1,11 +1,11 @@
-# ZelNodeUpdate v1.0
+# ZelNodeUpdate v2.0
 A simple script to assist with updating ZelNodes to the latest version.
 
 ## NOTE: This script is the latest version for MainNet ZelNodes.
 
 **NOTE:** This installation guide is provided as is with no warranties of any kind.
 
-**NOTE:** To run this version of the script (v1.0), please use the same login that was used to install the ZelNode.
+**NOTE:** To run this version of the script (v2.0), please use the same login that was used to install the ZelNode.
 
 This script has been tested on Ubuntu Server 16.04 & 18.04.
 
@@ -51,7 +51,7 @@ __NOTE:__ Please wait a few minutes for your node to connect and sync with the n
 
 __NOTE:__ Updated versions of the wallets are required for this otherwise your node will not start.
 Please verify you are using one of the following wallet versions:
-**ZelCore v1.4.0 or ZelMate v7.1.0**
+**ZelCore v1.4.4 or ZelMate v7.2.0**
 
 ***
 A special thank you to **Skyslayer**, who did the majority of the work on assembling this script, and **OrthoReb** for debugging.
