@@ -48,6 +48,7 @@ sudo systemctl stop zelcash > /dev/null 2>&1 && sleep 3
 sudo zelcash-cli stop > /dev/null 2>&1 && sleep 5
 sudo killall $COIN_DAEMON > /dev/null 2>&1
 #Removing old zelcash files
+sudo apt-get purge zelcash -y
 sudo rm -rf /usr/bin/zelcash* > /dev/null 2>&1
 echo -e "\033[1;33mDownloading new wallet binaries...\033[0m"
 #adding ZelCash APT Repo
