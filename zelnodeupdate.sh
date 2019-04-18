@@ -58,6 +58,7 @@ gpg --export 4B69CA27A986265D | sudo apt-key add -
 sudo apt-get update -y
 #Installing ZelCash via APT if it is not installed already via APT or update if it is
 sudo apt-get install zelcash
+chmod 755 /usr/local/bin/zelcash*
 #Install Ubuntu updates
 echo -e "\033[1;33m=======================================================\033[0m"
 echo "Updating your OS..."
