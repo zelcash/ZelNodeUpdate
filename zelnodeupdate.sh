@@ -126,7 +126,6 @@ echo -e "\033[1;33mSystemctl Complete....\033[0m"
 
 cd
 sudo chown -R $USERNAME:$USERNAME /home/$USERNAME
-rm zelnodeupdate.sh
 #Notice to user we are complete and request a reboot
 echo -e "\033[1;32mUpdate complete.\nPlease reboot the VPS by typing: \033[0msudo reboot -n\033[1;32m."
 echo -e "Then verify the ZelCash daemon has started by typing: \033[0mzelcash-cli getinfo\033[1;32m.\033[0m"
