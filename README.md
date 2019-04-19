@@ -33,6 +33,7 @@ The script will update your OS, install the new ZelNode binaries, and create a c
 
 __NOTE:__ This process may take anywhere from 3 to 5 minutes, depending on your VPS HW specs.
 
+
 3) **Once the script completes, reboot your VPS** by typing the following command:
 
 ```
@@ -44,6 +45,9 @@ sudo reboot -n
 ```
 zelcash-cli getinfo
 ```
+After a successfull update you will see 
+"version": 3010150,
+"protocolversion": 170011,
 
 __NOTE:__ Please wait a few minutes for your node to connect and sync with the network before running this command.
 
