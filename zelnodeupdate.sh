@@ -52,6 +52,11 @@ sudo apt-get purge zelcash -y
 sudo rm -rf /usr/bin/zelcash* > /dev/null 2>&1
 echo -e "\033[1;33mDownloading new wallet binaries...\033[0m"
 #adding ZelCash APT Repo
+if [ -f /etc/apt/sources.list.d/zelcash.list ]; then
+    echo -e "\033[1;36mExisting repo found, backing up to ~/zelcash.list.old ...\033[0m"
+    sudo mv /etc/apt/sources.list.d/zelcash.list ~/zelcash.list.old;
+    sleep 2
+fi
 echo 'deb https://zelcash.github.io/aptrepo/ all main' | sudo tee --append /etc/apt/sources.list.d/zelcash.list > /dev/null
 gpg --keyserver keyserver.ubuntu.com --recv 4B69CA27A986265D > /dev/null
 gpg --export 4B69CA27A986265D | sudo apt-key add -
@@ -95,7 +100,7 @@ echo -e "\n\033[1;32mLog rotate configuration complete.\n~/.zelcash/debug.log fi
 sleep 5
 
 # change zelcash service file to reflect new daemon path
-echo -e "\033[1;32mChanging system service file...\033[0m"
+echo -e "\033[1;32mUpdating system service...\033[0m"
 sudo touch /etc/systemd/system/$COIN_NAME.service
 sudo chown $USERNAME:$USERNAME /etc/systemd/system/$COIN_NAME.service
 cat << EOF > /etc/systemd/system/$COIN_NAME.service
@@ -128,6 +133,7 @@ echo -e "\033[1;33mSystemctl Complete....\033[0m"
 
 cd
 sudo chown -R $USERNAME:$USERNAME /home/$USERNAME
+rm ~/zelnodeupdate.sh
 #Notice to user we are complete and request a reboot
 echo -e "\033[1;32mUpdate complete.\nPlease reboot the VPS by typing: \033[0msudo reboot -n\033[1;32m."
 echo -e "Then verify the ZelCash daemon has started by typing: \033[0mzelcash-cli getinfo\033[1;32m.\033[0m"
