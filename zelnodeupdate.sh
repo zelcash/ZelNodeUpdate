@@ -70,7 +70,7 @@ echo "Updating your OS..."
 echo -e "\033[1;33m=======================================================\033[0m"
 echo "Installing package updates..."
 #Hold back sysbench updates for benchmarks
-#sudo apt-mark hold sysbench
+sudo apt-mark hold sysbench
 #sudo apt-get update -y
 #sudo apt-get upgrade -y
 echo -e "\033[1;32mLinux Packages Updates complete...\033[0m"
